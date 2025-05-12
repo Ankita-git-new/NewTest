@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/game', methods=['GET', 'POST'])
+@app.route('/app', methods=['GET', 'POST'])
 def game():
     number = random.randint(1, 10)
     message = ""
