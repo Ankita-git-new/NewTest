@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/app', methods=['GET', 'POST'])
 def game():
-    number = random.randint(1, 10)
+    number = random.randint(1, 100)
     message = ""
     if request.method == "POST":
         try:
@@ -20,7 +20,7 @@ def game():
             message = "Invalid input"
 
     return render_template_string("""
-        <h1>Guess the Number (1-10)</h1>
+        <h1>Guess the Number (1-100)</h1>
         <form method="post">
             <input name="guess" type="number" required>
             <input type="submit" value="Guess">
